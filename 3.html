@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Boxes</title>
+    <style>
+        /* Main container styling */
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px); /* Leave space for pagination */
+            background-color: #f4f4f4;
+        }
+
+        /* Outer box styling */
+        .box-big {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+        /* Inner box styling */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
+        /* Positioning for inner box */
+        .box-position {
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+
+        /* Pagination container */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            background-color: #f1f1f1;
+            padding: 10px 0;
+            border-top: 1px solid #ccc;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Pagination links */
+        .pagination a {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        /* Hover effect for pagination links */
+        .pagination a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Active pagination link */
+        .pagination .active {
+            background-color: #0056b3;
+        }
+
+        /* Arrow links */
+        .pagination .arrow {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main content -->
+    <div class="main">
+        <div class="box-big">
+            div1
+            <div class="box box-position">
+                div2
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <a href="index.html" class="arrow">←</a>
+        <a href="index.html" class="active">1</a>
+        <a href="2.html">2</a>
+        <a href="3.html">3</a>
+        <a href="4.html">4</a>
+        <a href="5.html">5</a>
+        <a href="5.html" class="arrow">→</a>
+    </div>
+</body>
+
+</html>
