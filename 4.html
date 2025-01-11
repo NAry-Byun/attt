@@ -7,34 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frogs</title>
     <style>
-        /* Frog Styling */
-        .frog {
-            width: 100px;
-            height: 100px;
-            background-color: lightgreen;
-            color: darkgreen;
+        .frog, .frog.frog-2 {
+            width: 200px;
+            height: 200px;
+            color: white;
             display: flex;
-            justify-content: center;
             align-items: center;
-            font-size: 24px;
+            justify-content: center;
+            font-size: 18px;
             font-weight: bold;
-            border-radius: 50%; /* Frogs are circular! */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            margin: 20px auto;
         }
 
-        .frog-2 {
+        .frog {
             background-color: black;
-            color: white; /* Ensure text is visible on a dark background */
         }
 
-        .frog-position {
+        .frog.frog-2 {
+            background-color: gray;
             position: relative;
             left: 50px;
-            top: -50px;
+            top: -80px;
         }
 
-        /* Pagination Styling */
+        .matter4 {
+            display: none;
+        }
         .pagination {
             display: flex;
             justify-content: center;
@@ -90,6 +87,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -100,7 +98,7 @@
         <div class="frog">
             🐸 Frog 1
         </div>
-        <div class="frog frog-2 frog-position">
+        <div class="frog frog-2">
             🐸 Frog 2
         </div>
     </div>
